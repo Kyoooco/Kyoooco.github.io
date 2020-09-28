@@ -1,0 +1,483 @@
+@charset "UTF-8";
+/*共通部分-------*/
+html {
+  font-size: 16px;
+  letter-spacing: 0.1em;
+  background-color: #ecf3f7; }
+
+body {
+  font-family: 'Roboto:wght@500;900', sans-serif,"游ゴシック体";
+  color: #222323; }
+
+a {
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  color: #222323;
+  font-weight: 500;
+  font-size: 20px; }
+  a:hover {
+    opacity: 0.7;
+    transition: all 0.5s; }
+
+.wrapper {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto; }
+
+section {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  border-bottom: 1px solid #ccc;
+  margin-right: auto;
+  margin-left: auto; }
+
+section:last-of-type {
+  border-bottom: none; }
+
+.section-title {
+  margin-bottom: 5px;
+  letter-spacing: 0.1em;
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 35px; }
+
+.section-subtitle {
+  font-family: "游ゴシック体";
+  font-size: 16px;
+  font-weight: 100;
+  margin-bottom: 50px;
+  color: #525655; }
+
+p {
+  font-family: "游ゴシック体";
+  color: #525655;
+  letter-spacing: 0.1em; }
+
+#globalNavi-Sp {
+  display: none; }
+
+/*ヘッダー部分-------*/
+header #globalNavi {
+  top: 0px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-bottom: 1px solid #222323; }
+header h1 {
+  font-family: 'Roboto';
+  font-weight: 900;
+  font-size: 72px;
+  letter-spacing: 0.3em; }
+header .main-img {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  text-align: center; }
+  header .main-img img {
+    max-width: 100%; }
+header ul {
+  display: flex;
+  list-style: none;
+  font-size: 20px;
+  font-family: 'Roboto';
+  font-weight: 500; }
+header li {
+  margin-left: 20px; }
+  header li:hover {
+    opacity: 0.7;
+    transition: all 0.5s; }
+header .globalNavi-flex {
+  display: flex;
+  justify-content: space-between; }
+
+.fixed {
+  position: fixed;
+  top: 0px;
+  padding: 0px;
+  width: 100%;
+  z-index: 1000; }
+
+/*メイン部分-------*/
+main .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px; }
+  main .grid .work .list {
+    width: 290px;
+    height: 290px;
+    background-color: rgba(87, 141, 185, 0.3);
+    box-shadow: 2px 2px 5px #d2d1d1;
+    position: relative; }
+  main .grid .work a {
+    opacity: 1; }
+    main .grid .work a:hover {
+      opacity: 0.7;
+      transition: all 0.5s; }
+  main .grid .work img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    max-width: 250px;
+    max-height: 250px;
+    width: 100%;
+    height: 100%;
+    object-fit: contain; }
+  main .grid .work p {
+    font-size: 12px;
+    text-align: center;
+    margin-top: 5px; }
+main .ABOUT .flex {
+  display: flex;
+  justify-content: space-around; }
+main .ABOUT .about-left {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 30px; }
+  main .ABOUT .about-left .about-left-top {
+    text-align: center; }
+    main .ABOUT .about-left .about-left-top img {
+      margin-bottom: auto; }
+  main .ABOUT .about-left .about-left-top-flex {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px; }
+  main .ABOUT .about-left a {
+    margin-right: 20px;
+    text-align: inherit; }
+main .ABOUT .about-text:before {
+  content: '';
+  /*何も入れない*/
+  display: inline-block;
+  /*忘れずに！*/
+  width: 30px;
+  /*画像の幅*/
+  height: 18px;
+  /*画像の高さ*/
+  background-image: url(../yubi+.png);
+  background-size: contain;
+  vertical-align: middle; }
+main .ABOUT .about-right {
+  margin-right: auto;
+  margin-left: auto; }
+  main .ABOUT .about-right p.about-text-career {
+    font-size: 14px; }
+  main .ABOUT .about-right li {
+    list-style-type: none;
+    border-bottom: 1px solid #CCC; }
+main .ABOUT .profile {
+  margin-bottom: 50px; }
+main .SKILL .box {
+  padding: 1em 1em;
+  border: solid 1px #000000;
+  width: 400px;
+  background-color: rgba(255, 255, 255, 0.8); }
+  main .SKILL .box p {
+    margin-bottom: 1em; }
+main .SKILL .box-title {
+  text-align: center;
+  margin-bottom: 2em; }
+  main .SKILL .box-title p {
+    font-size: 1.2em;
+    font-weight: 900; }
+main .SKILL .flex {
+  display: flex;
+  justify-content: space-around; }
+main .SKILL .skill-tool {
+  width: 30px;
+  height: 30px;
+  background: #333;
+  border-radius: 5px;
+  margin: 0 5px; }
+  main .SKILL .skill-tool p {
+    text-align: center;
+    color: aliceblue;
+    padding-top: 0.2em; }
+main .SKILL .skill-tool-flex {
+  display: flex;
+  justify-content: flex-end; }
+main .CONTACT .contactform {
+  max-width: 700px;
+  margin-right: auto;
+  margin-left: auto; }
+main .CONTACT form {
+  　　font-family: 'Roboto', sans-serif;
+  font-size: 1em;
+  font-weight: 500;
+  padding: 3% 10%;
+  background: rgba(87, 141, 185, 0.5);
+  border: 1px solid black;
+  box-shadow: 0 0px 0px black; }
+main .CONTACT dd {
+  margin: 0.25em 0 1.25em; }
+main .CONTACT input[type="text"], main .CONTACT input[type="email"] {
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 3px;
+  font-size: 1rem;
+  width: 70%; }
+main textarea {
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 3px;
+  font-size: 1rem;
+  width: 100%;
+  height: 6rem; }
+main .btn {
+  background-color: #f2f2f2;
+  text-align: center;
+  border: 1px #3e687d solid;
+  box-shadow: 0  2px 2px black;
+  width: 100px;
+  padding: 2px; }
+  main .btn:hover {
+    box-shadow: 0 0 0;
+    text-shadow: -2px -2px;
+    background-color: #222323;
+    color: #f2f2f2; }
+
+/*フッター部分-------*/
+footer {
+  text-align: center; }
+  footer p {
+    padding: 15px 0;
+    margin-top: 20px;
+    color: #f2f2f2;
+    background: #222323; }
+
+/*WORKSページ-------*/
+.works-list h2 {
+  margin-bottom: 30px; }
+.works-list img {
+  max-width: 300px;
+  max-height: 300px;
+  height: auto;
+  width: auto;
+  margin-right: 100px; }
+.works-list p {
+  font-size: 16px; }
+.works-list .works-flex {
+  display: flex;
+  margin-bottom: 100px; }
+.works-list .works-text {
+  width: 700px;
+  font-size: 16px; }
+.works-list dt {
+  font-family: "游ゴシック体";
+  float: left;
+  width: 150px;
+  color: #afafaf; }
+.works-list dd {
+  font-family: "游ゴシック体";
+  margin-left: 150px;
+  margin-bottom: 18px;
+  vertical-align: baseline; }
+
+/* リンク先ずれ調整 */
+.sample {
+  display: block;
+  margin-top: -200px;
+  padding-top: 200px; }
+
+/* ページTOPに戻る */
+.pagetop {
+  display: none;
+  position: fixed;
+  right: 15px;
+  bottom: 30px; }
+
+.pagetop a {
+  display: block;
+  font-size: 0;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  background: rgba(224, 180, 217, 0.8);
+  line-height: 40px; }
+
+.pagetop a i {
+  font-size: 10px;
+  color: #fff;
+  line-height: 40px; }
+
+/*fadein-------*/
+.fadein {
+  opacity: 0;
+  transform: translate(0, 100px);
+  transition: all 1s; }
+
+.fadein.active {
+  opacity: 1;
+  transform: translate(0, 0); }
+
+/*ハンバーガー-------*/
+/*　ハンバーガーボタン　*/
+.hamburger {
+  display: block;
+  position: fixed;
+  z-index: 3;
+  right: 13px;
+  top: 0px;
+  width: 42px;
+  height: 42px;
+  cursor: pointer;
+  text-align: center; }
+
+.hamburger span {
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  left: 6px;
+  background: #222323;
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out; }
+
+.hamburger span:nth-child(1) {
+  top: 10px; }
+
+.hamburger span:nth-child(2) {
+  top: 20px; }
+
+.hamburger span:nth-child(3) {
+  top: 30px; }
+
+/* ナビ開いてる時のボタン */
+.hamburger.active span:nth-child(1) {
+  top: 16px;
+  left: 6px;
+  background: #222323;
+  -webkit-transform: rotate(315deg);
+  -moz-transform: rotate(315deg);
+  transform: rotate(315deg); }
+
+.hamburger.active span:nth-child(2),
+.hamburger.active span:nth-child(3) {
+  top: 16px;
+  background: #222323;
+  -webkit-transform: rotate(-315deg);
+  -moz-transform: rotate(-315deg);
+  transform: rotate(-315deg); }
+
+nav.globalNavi-Sp {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  color: #222323;
+  background: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  width: 100%;
+  opacity: 0;
+  transition: opacity .6s ease, visibility .6s ease; }
+
+nav.globalNavi-Sp ul {
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%; }
+
+nav.globalNavi-Sp ul li {
+  list-style-type: none;
+  padding: 0;
+  margin-left: 0;
+  width: 100%;
+  transition: .4s all; }
+
+nav.globalNavi-Sp ul li:last-child {
+  padding-bottom: 0; }
+
+nav.globalNavi-Sp ul li a {
+  display: block;
+  color: #222323;
+  padding: 1em 0;
+  text-decoration: none; }
+
+/* このクラスを、jQueryで付与・削除する */
+nav.globalNavi-Sp.active {
+  opacity: 100; }
+
+/*レスポンシブ-------*/
+@media (max-width: 760px) {
+  .wrapper {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden; }
+
+  .main-nav {
+    display: none; }
+
+  #globalNavi-Sp {
+    display: block; }
+
+  .main-img h1 {
+    font-weight: 800;
+    font-size: 40px;
+    letter-spacing: 0.2em; }
+
+  .grid {
+    gap: 0px;
+    display: grid;
+    justify-items: center;
+    align-items: center; }
+
+  .ABOUT .flex {
+    flex-direction: column;
+    align-items: center; }
+
+  .design {
+    margin-bottom: 20px;
+    margin-right: 0px; }
+
+  .SKILL .flex {
+    flex-direction: column;
+    align-items: center; }
+
+  .about-left {
+    margin-bottom: 30px; }
+
+  .box {
+    padding: 1em 1em;
+    border: solid 1px #000000;
+    max-width: 300px; }
+
+  .contactform {
+    max-width: 500px; }
+
+  .works-flex {
+    flex-direction: column;
+    align-items: center; }
+
+  .works-text {
+    margin-top: 30px;
+    max-width: 100%; }
+
+  .works-list img {
+    margin-right: 0px; }
+
+  .works-text {
+    width: 600px;
+    font-size: 0.6em; }
+
+  p {
+    font-size: 12px; }
+
+  .section-title {
+    margin-bottom: 5px;
+    letter-spacing: 0.1em;
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 30px; }
+
+  .section-subtitle {
+    font-family: "游ゴシック体";
+    font-size: 16px;
+    font-weight: 100;
+    margin-bottom: 50px;
+    color: #525655; }
+
+  .about-text {
+    font-size: 14px; }
+
+  .about-text-career {
+    font-size: 14px; } }
