@@ -259,15 +259,15 @@ footer {
   margin-bottom: 100px; }
 .works-list .works-text {
   width: 700px;
-  font-size: 16px; }
+  font-size: 16px;
+  background-color: rgba(255,255,255,.7);
+  padding: 5px 20px;}
 .works-list dt {
   font-family: "游ゴシック体";
-  float: left;
   width: 150px;
   color: #afafaf; }
 .works-list dd {
   font-family: "游ゴシック体";
-  margin-left: 150px;
   margin-bottom: 18px;
   vertical-align: baseline; }
 
