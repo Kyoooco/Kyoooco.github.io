@@ -367,7 +367,7 @@ nav.globalNavi-Sp {
   background: rgba(255, 255, 255, 0.8);
   text-align: center;
   width: 100%;
-  opacity: 0;
+  display:none;
   transition: opacity .6s ease, visibility .6s ease; }
 
 nav.globalNavi-Sp ul {
@@ -394,7 +394,7 @@ nav.globalNavi-Sp ul li a {
 
 /* このクラスを、jQueryで付与・削除する */
 nav.globalNavi-Sp.active {
-  opacity: 100; }
+  display:block; }
 
 /*レスポンシブ-------*/
 @media (max-width: 760px) {
