@@ -9,6 +9,11 @@ $(function() {
     });
 });
 
+ $('.globalNavi-Sp').on('click', function(event) {
+        $('.hamburger').trigger('click');
+    });
+
+
 $(function(){
     $(window).scroll(function (){
         $('.fadein').each(function(){
